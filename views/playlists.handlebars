@@ -1,0 +1,31 @@
+{{!-- FIX Error: Navbar icon disappearsa --}}
+
+<div class="text-center">
+    <h1 style="font-size: 60px;
+  background: -webkit-linear-gradient( #F37335, #ffbb01);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;"><b>Welcome back, {{name}}!</b></h1>
+    <h1 style="font-size: 35px;
+  "><b> Here are your personal playlists. </b></h1\>
+        <br><br><br>
+        <table class="table table-dark table-striped" style="font-size: 20px;">
+            <thead>
+                <tr>
+                    <th scope="col">Playlist ID</th>
+                    <th scope="col">Playlist Name</th>
+                    <th scope="col">Tags</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each playlist}}
+                <tr>
+                    <th scope="row">{{this.pid}}</th>
+
+                    <td><a href={{this.pid}}>{{this.pname}}</a></td>
+
+                    <td>{{this.tags}}</td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+</div>
